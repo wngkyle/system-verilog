@@ -1,0 +1,19 @@
+----------------------------------Command to run the code with iverilog----------------------------------
+$ iverilog -g2012 -o tb tb.sv test.sv
+    // -g2012 : enables the IEEE1800-2012 standard, which includes SystemVerilog
+$ vvp tb 
+$ gtkwave filename.vcd
+
+------------------------------------------Run with Verilator---------------------------------------------
+$ verilator --binary test.sv tb.sv --top tb
+$ ./obj_dir/Vtb
+
+$ verilator --cc --exe --build --trace Adder_16_tb.sv -o sim.out --timing
+    // --cc	: Generates C++ code from the SystemVerilog design for compilation.
+    // --exe : Tells Verilator that we are compiling a testbench (not just Verilog to C++ conversion).
+    // --build : Compiles the generated C++ code into an executable binary using a C++ compiler (e.g., g++).
+    // --trace : Enables waveform tracing (for debugging in GTKWave).
+    // Adder_16_tb.sv : The testbench file that stimulates the design (usually instantiates Adder_16).
+    // -o sim.out : Specifies the output executable name (sim.out).
+    // --timing : Includes timing-related delays in the simulation (useful for debugging timing behavior).
+$

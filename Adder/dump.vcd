@@ -1,0 +1,105 @@
+$date
+	Wed Mar 19 23:53:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Adder_16_tb $end
+$var wire 16 ! sum [15:0] $end
+$var wire 1 " cout $end
+$var reg 1 # cin $end
+$var reg 16 $ x [15:0] $end
+$var reg 16 % y [15:0] $end
+$scope module DUT $end
+$var wire 1 # cin $end
+$var wire 16 & x [15:0] $end
+$var wire 16 ' y [15:0] $end
+$var wire 16 ( sum [15:0] $end
+$var wire 1 ) cout3 $end
+$var wire 1 * cout2 $end
+$var wire 1 + cout1 $end
+$var wire 1 " cout $end
+$scope module adder_1 $end
+$var wire 1 # cin $end
+$var wire 4 , x [3:0] $end
+$var wire 4 - y [3:0] $end
+$var wire 4 . sum [3:0] $end
+$var wire 1 + cout $end
+$upscope $end
+$scope module adder_2 $end
+$var wire 1 + cin $end
+$var wire 4 / x [3:0] $end
+$var wire 4 0 y [3:0] $end
+$var wire 4 1 sum [3:0] $end
+$var wire 1 * cout $end
+$upscope $end
+$scope module adder_3 $end
+$var wire 1 * cin $end
+$var wire 4 2 x [3:0] $end
+$var wire 4 3 y [3:0] $end
+$var wire 4 4 sum [3:0] $end
+$var wire 1 ) cout $end
+$upscope $end
+$scope module adder_4 $end
+$var wire 1 ) cin $end
+$var wire 4 5 x [3:0] $end
+$var wire 4 6 y [3:0] $end
+$var wire 4 7 sum [3:0] $end
+$var wire 1 " cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b101 7
+b100 6
+b1 5
+b101 4
+b100 3
+b1 2
+b101 1
+b100 0
+b1 /
+b101 .
+b100 -
+b1 ,
+0+
+0*
+0)
+b101010101010101 (
+b100010001000100 '
+b1000100010001 &
+b100010001000100 %
+b1000100010001 $
+0#
+0"
+b101010101010101 !
+$end
+#10
+b0 1
+b0 4
+b0 7
+b1 !
+b1 (
+b1 .
+b0 -
+b0 0
+b0 3
+b0 6
+b0 ,
+b0 /
+b0 2
+b0 5
+1#
+b0 %
+b0 '
+b0 $
+b0 &
+#20
